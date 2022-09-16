@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    flex-direction: column;
+  }
+  .container .child {
+    width: 300px;
+    margin: 20px 0 20px 0;
+    text-align: center;
+  }
+  input {
+    border-radius: 5px;
+    border: 0.5px solid blue;
+    padding: 5px 10px;
+    margin: 10px 0 0 0;
+  }
+  .container button {
+    padding: 10px 20px;
+    background: violet;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  .container button:hover{
+    cursor: pointer;
+    background:dodgerblue;
+  }
+  #output{
+    width:100%;
+    height:auto;
+  }

@@ -6,17 +6,14 @@ let btn = document.getElementById("cal");
 let display = document.querySelector("#output");
 
 // click event listener
-btn.addEventListener("click", calProfitAndLoss);
-
-// function to calculate profit and loss
-function calProfitAndLoss() {
+btn.addEventListener("click", calProfitAndLoss = () => { /* function calProfitAndLoss to calculate profit & loss*/
   let ip = Number(initialPrice.value);
   let cp = Number(currentPrice.value);
   let qty = Number(quantityOfStocks.value);
 
   if (ip > cp) {
     let loss = (ip - cp) * qty.toFixed(2);  /* toFixed to get correct to two decimal values*/
-    let newIp = ip * qty;                   
+    let newIp = ip * qty;                   /* newIp variable declared to get the new initial price*/
     let lossPercentage = ((loss / newIp) * 100).toFixed(2);
     display.innerText =
       "Loss is " +
@@ -36,7 +33,9 @@ function calProfitAndLoss() {
       " and profit percentage is " +
       profitPercentage +
       "%";
-  } else {
-    display.innerText = "No profit or loss, values are equal";
   }
-}
+  
+  else{
+    display.innerText = "No profit or loss, ip & cp are equal";
+  }
+});
